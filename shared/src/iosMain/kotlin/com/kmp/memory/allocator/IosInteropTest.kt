@@ -8,6 +8,7 @@ import kotlinx.cinterop.CPointer
 import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.cinterop.allocArray
 import kotlinx.cinterop.memScoped
+import kotlinx.cinterop.sizeOf
 import kotlinx.cinterop.useContents
 import platform.CoreGraphics.CGBitmapContextCreate
 import platform.CoreGraphics.CGBitmapContextCreateImage
@@ -68,4 +69,10 @@ object IosInteropTest {
         }
 //        }
 
+//        memScoped {
+//            // 8MB
+//            allocArray<ByteVar>(8 * 1024 * 1024).run {
+//                println("sizeOf<ByteVar>()=${sizeOf<ByteVar>()}")
+//            }
+//        }
 }
